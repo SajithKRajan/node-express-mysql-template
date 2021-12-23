@@ -55,7 +55,7 @@ This boilerplate has 4 main directories:
 
 - api - for controllers, models, services, etc.
 - config - for routes, database, etc.
-- db - this is only a dir for the sqlite db, the default for NODE_ENV development
+- db - this is only a dir for the mysql db, the default for NODE_ENV development
 - test - using [Jest](https://github.com/facebook/jest)
 
 ## Controllers
@@ -373,7 +373,7 @@ Holds all the server configurations.
 
 This two files are the way to establish a connaction to a database.
 
-You only need to touch connection.js, default for `development` is sqlite, but it is easy as typing `mysql` or `postgres` to switch to another db.
+You only need to touch connection.js, default for `development` is `mysql`, but it is easy as typing `mysql` or `postgres` to switch to another db.
 
 > Note: to run a mysql db install these package with: `yarn add mysql2` or `npm i mysql2 -S`
 
@@ -387,7 +387,7 @@ Now simple configure the keys with your credentials.
   username: 'username',
   password: 'password',
   host: 'localhost',
-  dialect: 'sqlite' || 'mysql' || 'postgres',
+  dialect: 'mysql' || 'sqlite' || 'postgres',
 }
 ```
 
